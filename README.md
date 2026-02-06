@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tahwul test
+
+A professional, high-performance web application designed to visualize strategic goals and monitor audit readiness. This project focuses on a clean user experience and robust architecture using the latest frontend standards.
 
 ## 🔗 Live Demo
 You can view the live frontend application here:  
@@ -13,24 +15,55 @@ Follow these steps to set up the project locally using Yarn:
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+Navigate to the project directory:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Bash
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+cd your-repo-name
+Install dependencies:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Bash
 
-## Learn More
+yarn install
+Run the development server:
 
-To learn more about Next.js, take a look at the following resources:
+Bash
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+yarn dev
+Open the application: Open http://localhost:3000 in your browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🛠 How I Built the Project
+As a Full Stack Developer, I built this application with a focus on responsiveness, type safety, and modern CSS-first workflows.
 
-## Deploy on Vercel
+Next.js 15: Leveraged the latest App Router and Server Components for optimized performance and SEO.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Tailwind CSS v4: Implemented the new CSS-first engine, which eliminates legacy configuration files and provides a faster, more streamlined styling experience.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Recharts: Developed custom data visualizations, including a tailored Radial Bar Chart for the "Audit Readiness" gauge with manual SVG path adjustments.
+
+TypeScript: Utilized throughout the project to ensure strict type safety and a better developer experience.
+
+Shadcn/UI: Used as a foundation for UI components, heavily customized to meet the professional aesthetic of strategic planning dashboards.
+
+🧠 Assumptions Made
+UI Layout: Assumed a grid-based 1:3 ratio for strategic cards to maintain a clean balance between labels and content.
+
+Responsive Breakpoints: Assumed standard breakpoints for mobile and desktop to ensure the layout transitions smoothly from a single column to a side-by-side view.
+
+Visual Standards: Followed a specific professional color palette (Navy Blue & Green) based on common government and corporate strategic portal designs.
+
+📈 Future Improvements (With More Time)
+If I had more time, I would focus on:
+
+Full Backend Integration: Connecting the Prisma/Sequelize ORM to enable real-time data persistence and dynamic dashboard updates.
+
+Advanced Interactivity: Adding Framer Motion for smoother entrance animations and interactive hover states on charts.
+
+Export Features: Implementing a tool to export the strategic summary as a professional PDF report.
+
+Comprehensive Testing: Adding unit and E2E tests using Jest and Cypress to ensure reliability in audit calculations.
+
+📦 Tech Stack Summary
+Frontend: Next.js 15, React, Tailwind CSS v4, Recharts, Shadcn Ui
+Language: TypeScript
+Package Manager: Yarn
