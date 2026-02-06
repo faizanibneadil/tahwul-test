@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
+import { Separator } from "@/components/ui/separator";
+import { SearchForm } from "@/components/search-form";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ChevronDown } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +33,39 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <SidebarProvider>
+          <AppSidebar />
+          <SidebarInset>
+            <header className="bg-background sticky top-0 flex h-16 shrink-0 items-center gap-2 border-b px-4 z-50">
+              <SidebarTrigger className="-ml-1" />
+              <Separator orientation="vertical" className="mr-2 h-4" />
+              <div className="flex w-full items-center justify-between">
+                <SearchForm />
+                <div className="flex gap-4 items-center">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.99996 14C6.53063 14.4147 7.23196 14.6667 7.99996 14.6667C8.76796 14.6667 9.4693 14.4147 9.99996 14M1.68663 9.59604C1.54463 10.498 2.17863 11.124 2.95463 11.436C5.92996 12.6327 10.07 12.6327 13.0453 11.436C13.8213 11.124 14.4553 10.498 14.3133 9.59604C14.2266 9.04137 13.7953 8.58004 13.476 8.12937C13.058 7.53137 13.0166 6.88004 13.016 6.18604C13.0166 3.50671 10.7713 1.33337 7.99996 1.33337C5.22863 1.33337 2.9833 3.50671 2.9833 6.18671C2.9833 6.88004 2.94196 7.53204 2.5233 8.12937C2.20463 8.58004 1.77396 9.04137 1.68663 9.59604Z" stroke="#8597A8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+
+                  <button className="flex items-center gap-2 bg-sidebar-accent p-1 rounded-full">
+                    <Avatar className="size-4">
+                      <AvatarImage
+                        src="https://github.com/shadcn.png"
+                        alt="@shadcn"
+                        className="grayscale"
+                      />
+                      <AvatarFallback>CN</AvatarFallback>
+                    </Avatar>
+                    <p className="text-xs">Muhamad</p>
+                    <ChevronDown className="size-3" />
+                  </button>
+                </div>
+              </div>
+            </header>
+            <div className="flex flex-1 flex-col gap-4 p-4">
+              {children}
+            </div>
+          </SidebarInset>
+        </SidebarProvider>
       </body>
     </html>
   );
