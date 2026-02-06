@@ -6,15 +6,13 @@ You can view the live frontend application here:
 
 ---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 How to Run the Project
+
+Follow these steps to set up the project locally using Yarn:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
