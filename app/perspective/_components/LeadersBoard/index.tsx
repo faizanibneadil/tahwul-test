@@ -1,6 +1,6 @@
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { LeadersBoardUsers } from "@/types";
+import type { LeadersBoardUsers } from "@/types";
 
 export function LeadersBoard(props: { leadersBoardUsers: LeadersBoardUsers[] }) {
     const {

@@ -6,7 +6,6 @@ export type Comment = {
     createdAt: string | Date,
     comment: string
 }
-
 export type Activity = {
     activity: string,
     createdAt: string | Date
@@ -18,4 +17,16 @@ export type LeadersBoardUsers = {
         designation: string
     }, 
     performance: string
+}
+export type Status = { 
+    status: string 
+}
+export type Categories = {
+    label: string,
+    statuses:Status[]
+}
+export type ProgressItem = {
+    label: string,
+    progress: string,
+    categories: Categories[]
 }
