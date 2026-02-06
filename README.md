@@ -29,6 +29,37 @@ Run the development server:
 
 Bash
 
+# Tahwul test
+
+A professional, high-performance web application designed to visualize strategic goals and monitor audit readiness. This project focuses on a clean user experience and robust architecture using the latest frontend standards.
+
+## 🔗 Live Demo
+You can view the live frontend application here:  
+👉 **[Insert Your Vercel/Netlify URL Here]**
+
+---
+
+## 🚀 How to Run the Project
+
+Follow these steps to set up the project locally using Yarn:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+Navigate to the project directory:
+
+Bash
+
+cd your-repo-name
+Install dependencies:
+
+Bash
+
+yarn install
+Run the development server:
+
+Bash
+
 yarn dev
 Open the application: Open http://localhost:3000 in your browser.
 
