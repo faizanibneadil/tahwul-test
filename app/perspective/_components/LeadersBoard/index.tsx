@@ -1,6 +1,6 @@
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import type { LeadersBoardUsers } from "@/types";
+import { LeadersBoardCard } from "./leader-board-card";
 
 export function LeadersBoard(props: { leadersBoardUsers: LeadersBoardUsers[] }) {
     const {
@@ -18,19 +18,3 @@ export function LeadersBoard(props: { leadersBoardUsers: LeadersBoardUsers[] }) 
     )
 }
 
-function LeadersBoardCard(props: {leaderBoardUser: LeadersBoardUsers}){
-    const {
-        leaderBoardUser
-    } = props || {}
-    return (
-        <div className="flex items-center gap-2 bg-sidebar-accent rounded-md p-2">
-                        <Avatar>
-                            <AvatarImage src={`/assets/${leaderBoardUser?.img}`} />
-                        </Avatar>
-                        <div className="flex flex-col flex-1 gap-1">
-                            <div className="text-sm">{leaderBoardUser?.user?.name}</div>
-                            <div className="text-xs">{leaderBoardUser?.user?.designation}</div>
-                        </div>
-                    </div>
-    )
-}

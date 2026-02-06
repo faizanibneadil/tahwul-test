@@ -1,13 +1,12 @@
+import { AuditReadinessGraph } from "@/components/audit-readiness-graph";
+import { ComplianceGraph } from "@/components/compliance-graph";
+import { PerformanceGraph } from "@/components/performence-graph";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import Image from "next/image";
+import { recent_activities } from "@/data/activities";
 import { MileStoneTimeline } from "../components/MileStoneTimeline";
 import { ProgressStatusBoard } from "../components/ProgressStatusBoard";
-import { ComplianceGraph } from "@/components/compliance-graph";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { PerformanceGraph } from "@/components/performence-graph";
-import { AuditReadinessGraph } from "@/components/audit-readiness-graph";
 import { RecentActivity } from "../components/RecentActivity";
-import { recent_activities } from "@/data/activities";
 import { StatsCards } from "../components/StatsCards";
 
 

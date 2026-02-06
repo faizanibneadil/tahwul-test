@@ -1,6 +1,6 @@
-import { Card } from "@/components/ui/card"
+import { StateCard } from "./state-card"
 
-const stats = [
+export const stats = [
     {
         Icon: () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.5 19H12.5C9.67099 19 8.25699 19 7.37899 18.121C6.49899 17.243 6.49899 15.828 6.49899 13V8C6.49899 5.172 6.49899 3.757 7.37899 2.879C8.25599 2 9.66999 2 12.499 2H13.843C14.661 2 15.069 2 15.437 2.152C15.804 2.304 16.093 2.594 16.671 3.172L19.328 5.828C19.906 6.406 20.195 6.696 20.348 7.063C20.5 7.431 20.5 7.839 20.5 8.657V13C20.5 15.828 20.5 17.243 19.621 18.121C18.743 19 17.328 19 14.5 19Z" stroke="#DB1F26" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -35,15 +35,7 @@ export function StatsCards() {
     return (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {stats?.map((item, idx) => (
-                <Card key={`stat-card-${idx}`} className="p-2 gap-2 rounded-md shadow-none">
-                    <div className="flex items-center gap-2">
-                        <item.Icon />
-                        <div className="">
-                            <p className="text-lg font-bold">{item?.value}</p>
-                            <div className="text-xs px-0 py-0">{item.label}</div>
-                        </div>
-                    </div>
-                </Card>
+                <StateCard key={`state-${idx}`} item={item} />
             ))}
         </div>
     )
