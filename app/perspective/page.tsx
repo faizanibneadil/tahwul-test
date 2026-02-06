@@ -6,7 +6,7 @@ import { DocumentTable } from "./_components/DocumentTable";
 import { LeadersBoard } from "./_components/LeadersBoard";
 import { ScoreGraph } from "./_components/ScoreGraph";
 import { StatsCards } from "./_components/StatsCards";
-import { RecentActivity } from "../_components/RecentActivity";
+import { RecentActivity } from "../../components/RecentActivity";
 import { recent_activities } from "@/data/activities";
 import { comments } from "@/data/comment";
 import { leadersBoardUsers } from "@/data/leaders-board-users";
